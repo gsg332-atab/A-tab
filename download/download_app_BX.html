@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta name="format-detection" content="telephone=no" />
+<title>i-Cabin App Download</title>
+  
+<style>
+/* ******************************
+   BASE 
+  ****************************** */
+body{-webkit-touch-callout: none;	-webkit-user-select: none;	-webkit-text-size-adjust:none;	-webkit-tap-highlight-color: rgba(0,0,0,0);  
+    -webkit-tap-highlight-color: transparent;   width:100%;height:100%; background-color: #23293D;}
+
+@font-face {
+  font-family: 'ntss'; 
+  src: url(font/NotoSansCJKkr-Regular.ttf) format('truetype'), 
+       url(font/NotoSansCJKkr-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'ntss-bold';
+  src: url(font/NotoSansCJKkr-Bold.ttf) format('truetype'),
+       url(font/NotoSansCJKkr-Bold.woff) format('woff');
+} 
+
+*{box-sizing:border-box;margin:0;padding:0;color:#000; font-family:'ntss'; -webkit-text-size-adjust: none; background-repeat: no-repeat; }
+ol, ul, li {list-style:none;}
+a{color:inherit;text-decoration:none;}
+
+
+
+.down_body{width: 100vw; max-height: 1200px; /*height: 100vh; height: var(--vh, 1vh) * 100;*/ height: 100%; display:flex; flex-direction: column; margin:auto; text-align: center; position: relative; gap: 20px;}
+
+.con_wrap{flex: 0 0 calc(100vh - 100px); display: flex; flex-direction: column; justify-content: center; gap: 20px;}
+    
+.down_header{padding:40px 0 10px;}
+.down_header h1{font-size: 0; height: 50px; width: 100%; background: url("images/icabin_bi.svg") no-repeat center center; background-size: auto 35px;}
+.down_header p{font-size:18px; color: #fff; padding-top: 15px;}
+.down_header p strong{display: block; color: #fff;}
+
+.down_content{margin:0 auto; display: flex; gap: 5px; justify-content: center; flex-direction: column;}
+.down_content > div{flex: 1 1 0; }
+.down_content .downbox_1{border:solid 1px rgba(255,255,255,.2); border-radius: 30px; flex: 1 1 0; height: 60px; width: 80vw; max-width: 480px; margin: 0 auto;  color: #fff;}
+.down_content .downbox_1 a{display: flex;  padding: 8px 15px; text-align: center; gap: 5px;}
+.down_content .downbox_1 a img[src *="img"]{width: 100%; max-width: 100px; margin: auto; }
+.down_content .downbox_1 a img[src *="icon"]{width: 15px; margin: 0 auto;}
+.down_content .downbox_1 a span{color: #fff; line-height: 44px; font-size: 20px; font-weight: bold;}
+.down_content #android_link_wrap .downbox_1 a span.down_txt{background: url(images/icon_down_and.svg) no-repeat center center;}
+.down_content .downbox_1 a span.down_txt{margin-left: auto; font-size: 0; background: url(images/icon_down.svg) no-repeat center center; width: 40px; height: 40px; }
+.down_content .downbox_1 a p{color: #fff; font-size: 14px;}
+
+.down_content .downbox_1 a:before{content: ""; background-repeat: no-repeat; background-position: center center; background-size: 30px auto; width: 30px; height: 40px; }
+#android_link_wrap .downbox_1 a:before{background-image: url(images/icon_and.svg);}
+#ios_link_wrap .downbox_1 a:before{background-image: url(images/icon_ios.svg);}
+#ios_link_wrap{display: flex; flex-direction: column; gap: 5px;}
+
+.down_content #android_link_wrap .downbox_1{border: 1px solid rgba(96,220,133,.3);}
+.down_content #android_link_wrap .downbox_1 span{color: #60DC85;}
+
+.guide{width: 100%; max-width: 520px; margin: 0 auto;}
+.guide > div{text-align: left; color: #fff; margin: 0 50px; padding-left: 25px;}
+.guide > div a{padding: 8px 0; line-height: 15px; display: block;}
+.guide > div a, .guide > div a strong{color: #fff; padding-right: 5px;}
+.guide > div.and{background: url("images/icon_and.svg") no-repeat left center; background-size: auto 20px;}
+.guide > div.ios{background: url("images/icon_ios.svg") no-repeat left center; background-size: auto 20px;}
+
+
+.down_footer{width: 100%; position: relative; margin-top: auto; background-color: #fff; padding: 20px 0; display: flex; flex-direction: column; justify-items: center; text-align: center;}
+.down_footer img{width: 100px; margin: 0 auto 10px;}
+.down_footer:after{content:"ⓒ ASIANAIDT. All rights reserved."; color: #24293e; font-size: 12px; padding: 0;}
+
+</style>
+<script>
+	/*
+    //디바이스 종류 체크
+    function checkAgent(){
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match('android') != null) { 
+            //안드로이드 일때 처리
+            document.getElementById("android_link_wrap").style.display = "block";
+        } else if (ua.indexOf("iphone") > -1) { 
+            //IOS 일때 처리
+            document.getElementById("ios_link_wrap").style.display = "block";
+        } else {    
+            //아이폰, 안드로이드 외 처리
+            document.getElementById("not_mobile_wrap").style.display = "block";
+			//document.getElementById("android_link_wrap").style.display = "block";
+        }
+    }    
+    window.addEventListener('load',function(){
+        checkAgent();
+    });
+	*/
+	
+	let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+    window.addEventListener('touchend', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+</script>
+     
+</head>
+    <body class="down_body">
+    
+    	<div class="con_wrap">
+	        <!-- header-->
+	       <header class="down_header">
+	            <h1>i-Cabin</h1>
+	            <p>BUSINESS APP DOWNLOAD</p>
+	        </header>
+	        <!--// header-->
+	
+	        <!-- content -->
+	        <section class="down_content">
+	            <!-- Android -->
+	            <div id="android_link_wrap">
+	                <div class="downbox_1">
+	                    <a rel="noreferrer" href="https://icabin-common-miaps.solutions.asianaidt.com/miaps/app/appInstall.miaps?q=Np%2BSU4zeeys7KgBPdfC2Yg%3D%3D&filegubun=appFile&platformCd=2000012"><span class="title_txt">Android</span><span class="down_txt">APP DOWN</span></a>
+						<!--
+	                    <a href="A-tab_교육자료_20190604_KO.pdf">한글<br>튜토리얼</a>
+	                    <a href="A-tab_교육자료_20190624_EN.pdf">ENG<br>Tutorial</a>
+						-->
+	                </div>
+	            </div>
+				<!--
+	            <div id="android_link_wrap">
+	                <div class="downbox_1">
+	                    <a href="https://icabin-common-miaps.solutions.asianaidt.com/miaps/app/appInstall.miaps?q=BQfTphRFXRZD4CaL1cNbWg%3D%3D&filegubun=appFile&platformCd=2000012"><span class="title_txt">Android Test</span><span class="down_txt">APP DOWN</span></a>
+	                </div>
+	            </div>
+				-->
+	            <!--// Android -->
+	
+	            <!-- Ios -->
+	            <div id="ios_link_wrap">
+	                <div class="downbox_1">
+	                    <a rel="noreferrer" href="itms-services://?action=download-manifest&url=https%3A%2F%2Ficabin-common-miaps.solutions.asianaidt.com%2Fmiaps%2Fapp%2FappInstall.miaps%3Fq%3DDiMlNv3sTfokcCG6efUtWg%253D%253D%26filegubun%3DmanifestFile%26platformCd%3D2000013"><span class="title_txt">iOS</span><span class="down_txt">APP DOWN</span></a>
+						<!--
+	                    <a href="A-tab_교육자료_20190604_KO.pdf">한글<br>튜토리얼</a>
+	                    <a href="A-tab_교육자료_20190624_EN.pdf">ENG<br>Tutorial</a>
+						-->
+	                </div>
+					
+					<!--
+					<div class="downbox_1">
+	                    <a href="itms-services://?action=download-manifest&url=https%3A%2F%2Ficabin-common-miaps.solutions.asianaidt.com%2Fmiaps%2Fapp%2FappInstall.miaps%3Fq%3D2ghifLDTN9IguzraeAURRQ%253D%253D%26filegubun%3DmanifestFile%26platformCd%3D2000013"><span class="title_txt">iOS Test</span><span class="down_txt">APP DOWN</span></a>
+	                </div>
+					-->
+	            </div>
+	            <!--// Ios-->
+	        </section>
+	        <section class="guide">
+	            	<div class="and"><a href="https://icabin-common-miaps.solutions.asianaidt.com/download/i-cabin설치및사용자매뉴얼.pdf"><strong>android</strong> i-Cabin App 설치 방법</a></div>
+	            	<div class="ios"><a href="https://icabin-common-miaps.solutions.asianaidt.com/download/i-cabin설치및사용자매뉴얼.pdf"><strong>iOS</strong> i-Cabin App 설치 방법</a></div>
+	        </section>
+	        <!--// content -->
+	    
+	    </div>
+
+        <!-- footer-->
+        <footer class="down_footer">
+            <img src="images/asianaidt.svg" alt="" class="ci_img">
+        </footer>
+        <!--// footer-->
+
+    </body>
+</html>
